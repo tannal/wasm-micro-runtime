@@ -3,6 +3,7 @@
 name: build wamrc
 
 on:
+  workflow_dispatch:
   workflow_call:
     inputs:
       arch:
@@ -33,7 +34,6 @@ on:
 
 jobs:
   build:
-    runs-on: ${{ inputs.runner }}
     steps:
       - uses: actions/checkout@v4
 
